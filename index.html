@@ -16,7 +16,6 @@
             --text-light: #B8B8B8;
             --card-bg: #0F3460;
         }
-
         * {
             margin: 0;
             padding: 0;
@@ -464,7 +463,20 @@
                 transform: translateY(-5px);
                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             }
+            .project-video {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 16/9;
+}
 
+.project-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
             .project-card:hover {
                 transform: translateY(-8px);
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -500,7 +512,11 @@
         ::-webkit-scrollbar-track {
             background: var(--secondary-color);
         }
-
+        @media (max-width: 768px) {
+    .project-video {
+        margin: 1rem 0;
+    }
+}
         ::-webkit-scrollbar-thumb {
             background: var(--primary-color);
             border-radius: 4px;
@@ -679,6 +695,7 @@
                             <p class="project-description">
                                 Developed a hand-tracking system using Mediapipe, OpenCV, and Python to control the mouse cursor and simulate double-click functionality based on finger movements.
                             </p>
+                           
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">OpenCV</span>
@@ -696,7 +713,19 @@
                             <p class="project-description">
                                 Created a voice-activated desktop assistant to perform tasks like sending emails, opening websites, playing music, and scheduling meetings. Integrated a security feature using voice password verification.
                             </p>
+                            <div class="project-card">
+                                <div class="project-content">
+                                        <!-- Add this video container -->
+                                    <div class="project-video">
+                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/56gmDdT2-xA" 
+                                                title="YouTube video player" frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project-tech">
+                                
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">pyttsx3</span>
                                 <span class="tech-tag">speech recognition</span>
